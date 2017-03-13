@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- theme color -->
+    <attr name="themeColor" format="color|reference" />
+    <attr name="themeAccentColor" format="color|reference" />
+    <attr name="widgetBackground" format="color|reference" />
+    <attr name="widgetBackgroundDark" format="color|reference" />
+    <attr name="widgetBackgroundTitle" format="color|reference" />
+
+    <!-- 左滑退出 -->
+    <attr name="SwipeBackLayoutStyle" format="reference" />
+    <declare-styleable name="SwipeBackLayout">
+        <attr name="edge_size" format="dimension" />
+        <attr name="edge_flag">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+            <enum name="bottom" value="2" />
+            <enum name="all" value="3" />
+        </attr>
+        <attr name="shadow_left" format="reference" />
+        <attr name="shadow_right" format="reference" />
+        <attr name="shadow_bottom" format="reference" />
+    </declare-styleable>
+
+    <!-- 甜心弹出框 - 加载进度轮 -->
+    <declare-styleable name="ProgressWheel">
+        <attr name="matProg_progressIndeterminate" format="boolean" />
+        <attr name="matProg_barColor" format="color" />
+        <attr name="matProg_rimColor" format="color" />
+        <attr name="matProg_rimWidth" format="dimension" />
+        <attr name="matProg_spinSpeed" format="dimension" />
+        <attr name="matProg_barSpinCycleTime" format="integer" />
+        <attr name="matProg_circleRadius" format="dimension" />
+        <attr name="matProg_fillRadius" format="boolean" />
+        <attr name="matProg_barWidth" format="dimension" />
+        <attr name="matProg_linearProgress" format="boolean" />
+    </declare-styleable>
+
+    <!-- Common attributes -->
+    <attr name="bootstrapBrand" format="enum">
+        <enum name="primary" value="0" />
+        <enum name="success" value="1" />
+        <enum name="info" value="2" />
+        <enum name="warning" value="3" />
+        <enum name="danger" value="4" />
+        <enum name="regular" value="5" />
+        <enum name="secondary" value="6" />
+    </attr>
+    <attr name="buttonMode" format="enum">
+        <enum name="regular" value="0" />
+        <enum name="toggle" value="1" />
+        <enum name="checkbox" value="2" />
+        <enum name="radio" value="3" />
+    </attr>
+    <attr name="bootstrapSize" format="enum">
+        <enum name="xs" value="0" />
+        <enum name="sm" value="1" />
+        <enum name="md" value="2" />
+        <enum name="lg" value="3" />
+        <enum name="xl" value="4" />
+    </attr>
+    <attr name="bootstrapHeading" format="enum">
+        <enum name="h1" value="0" />
+        <enum name="h2" value="1" />
+        <enum name="h3" value="2" />
+        <enum name="h4" value="3" />
+        <enum name="h5" value="4" />
+        <enum name="h6" value="5" />
+    </attr>
+    <attr name="bootstrapExpandDirection" format="enum">
+        <enum name="up" value="0" />
+        <enum name="down" value="1" />
+    </attr>
+    <attr name="showOutline" format="boolean" />
+    <attr name="roundedCorners" format="boolean" />
+    <attr name="hasBorder" format="boolean" />
+    <attr name="checkedButton" format="reference" />
+    <attr name="checked" format="boolean" />
+    <attr name="dropdownResource" format="reference" />
+    <attr name="itemHeight" format="dimension" />
+    <attr name="strongText" format="string" />
+    <attr name="messageText" format="string" />
+    <attr name="badgeText" format="string" />
+    <attr name="dismissible" format="boolean" />
+    <!-- Bootstrap AwesomeTextView -->
+    <declare-styleable name="AwesomeTextView">
+        <attr name="bootstrapText" format="string" />
+        <attr name="bootstrapBrand" />
+        <attr name="fontAwesomeIcon" />
+        <attr name="typicon" />
+        <attr name="materialIcon" />
+        <attr name="android:clickable" />
+        <!--<attr name="bootstrapGravity">-->
+            <!--<flag name="center" value="17" />-->
+            <!--<flag name="start" value="8388611" />-->
+            <!--<flag name="end" value="8388613" />-->
+            <!--<flag name="center_vertical" value="16" />-->
+            <!--<flag name="center_horizontal" value="1" />-->
+        <!--</attr>-->
+    </declare-styleable>
+    <!-- Bootstrap BootstrapButton -->
+    <declare-styleable name="BootstrapButton">
+        <attr name="buttonMode" />
+        <attr name="showOutline" />
+        <attr name="roundedCorners" />
+        <attr name="bootstrapBrand" />
+        <attr name="bootstrapSize" />
+        <attr name="checked" />
+        <attr name="badgeText" />
+    </declare-styleable>
+    <!-- Bootstrap BootstrapButtonGroup -->
+    <declare-styleable name="BootstrapButtonGroup">
+        <attr name="buttonMode" />
+        <attr name="showOutline" />
+        <attr name="roundedCorners" />
+        <attr name="bootstrapBrand" />
+        <attr name="bootstrapSize" />
+        <attr name="checkedButton" />
+    </declare-styleable>
+    <!-- Bootstrap BootstrapProgressBar -->
+    <declare-styleable name="BootstrapProgressBar">
+        <attr name="striped" format="boolean" />
+        <attr name="animated" format="boolean" />
+        <attr name="bootstrapProgress" format="integer" />
+        <attr name="bootstrapMaxProgress" format="integer" />
+        <attr name="bootstrapshowPercentage" format="boolean" />
+        <attr name="roundedCorners" />
+        <attr name="bootstrapBrand" />
+        <attr name="bootstrapSize" />
+    </declare-styleable>
+    <!-- Bootstrap BootstrapProgressBarGroup -->
+    <declare-styleable name="BootstrapProgressBarGroup">
+        <attr name="bootstrapMaxProgress" />
+        <attr name="bootstrapSize" />
+        <attr name="roundedCorners" />
+    </declare-styleable>
+    <!-- Bootstrap BootstrapCircleThumbnail -->
+    <declare-styleable name="BootstrapCircleThumbnail">
+        <attr name="bootstrapBrand" />
+        <attr name="hasBorder" />
+        <attr name="bootstrapSize" />
+    </declare-styleable>
+    <!-- Bootstrap BootstrapThumbnail -->
+    <declare-styleable name="BootstrapThumbnail">
+        <attr name="bootstrapBrand" />
+        <attr name="roundedCorners" />
+        <attr name="hasBorder" />
+        <attr name="bootstrapSize" />
+    </declare-styleable>
+    <!-- Bootstrap BootstrapEditText -->
+    <declare-styleable name="BootstrapEditText">
+        <attr name="roundedCorners" />
+        <attr name="bootstrapBrand" />
+        <attr name="bootstrapSize" />
+    </declare-styleable>
+    <!-- Bootstrap BootstrapDropDown -->
+    <declare-styleable name="BootstrapDropDown">
+        <attr name="bootstrapExpandDirection" />
+        <attr name="dropdownResource" />
+        <attr name="showOutline" />
+        <attr name="roundedCorners" />
+        <attr name="bootstrapBrand" />
+        <attr name="bootstrapSize" />
+        <attr name="itemHeight" />
+    </declare-styleable>
+    <!-- Bootstrap BootstrapWell -->
+    <declare-styleable name="BootstrapWell">
+        <attr name="bootstrapSize" />
+    </declare-styleable>
+    <!-- Bootstrap BootstrapAlert -->
+    <declare-styleable name="BootstrapAlert">
+        <attr name="bootstrapBrand" />
+        <attr name="strongText" />
+        <attr name="messageText" />
+        <attr name="dismissible" />
+    </declare-styleable>
+    <!-- Bootstrap BootstrapBadge -->
+    <declare-styleable name="BootstrapBadge">
+        <attr name="badgeText" />
+        <attr name="bootstrapSize" />
+    </declare-styleable>
+    <!-- Bootstrap BootstrapLabel -->
+    <declare-styleable name="BootstrapLabel">
+        <attr name="bootstrapHeading" />
+        <attr name="roundedCorners" />
+    </declare-styleable>
+
+    <!-- XBanner -->
+    <declare-styleable name="XBanner">
+        <attr name="canLoop" format="boolean" />
+    </declare-styleable>
+    
+    <!-- Bottom Navigation -->
+    <declare-styleable name="SmartNavigationBar">
+        <attr name="carsmartElevation" format="dimension" />
+        <attr name="carsmartActiveColor" format="color" />
+        <attr name="carsmartInactiveColor" format="color" />
+        <attr name="carsmartBackgroundColor" format="color" />
+        <attr name="carsmartAnimationDuration" format="integer" />
+        <attr name="carsmartMode" format="enum">
+            <enum name="mode_default" value="0" />
+            <enum name="mode_fixed" value="1" />
+            <enum name="mode_shifting" value="2" />
+        </attr>
+        <attr name="carsmartBackgroundStyle" format="enum">
+            <enum name="background_style_default" value="0" />
+            <enum name="background_style_static" value="1" />
+            <enum name="background_style_ripple" value="2" />
+        </attr>
+        <attr name="carsmartAutoHideEnabled" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="SmartNavigationBehavior_Params">
+        <attr name="tabLayoutId" format="reference" />
+    </declare-styleable>
+
+</resources>

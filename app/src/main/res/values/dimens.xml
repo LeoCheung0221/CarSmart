@@ -1,0 +1,44 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="statusbar_view_height">0dp</dimen>
+
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+
+    <!-- ＴＥＸＴ　ＳＩＺＥ －－－－－ ＳＰ　-->
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_13">13sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_15">15sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_17">17sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_19">19sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="text_size_21">21sp</dimen>
+
+    <!--　－－－－－－－－－－－－－　ＡＵＴＯ　ＬＡＹＯＵＴ　－－－－－－－－－－－－－－－－ -->
+    <dimen name="login_header_height">640px</dimen>
+    <dimen name="register_bg_height">691px</dimen>
+
+    <dimen name="common_dimen_214px">214px</dimen>
+    <dimen name="common_dimen_104px">104px</dimen>
+    <dimen name="common_dimen_100px">100px</dimen>
+    <dimen name="common_dimen_96px">96px</dimen>
+    <dimen name="common_dimen_68px">68px</dimen>
+    <dimen name="common_dimen_64px">64px</dimen>
+    <dimen name="common_dimen_54px">54px</dimen>
+    <dimen name="common_dimen_50px">50px</dimen>
+    <dimen name="common_dimen_48px">48px</dimen>
+    <dimen name="common_dimen_40px">40px</dimen>
+    <dimen name="common_dimen_36px">36px</dimen>
+    <dimen name="common_dimen_32px">32px</dimen>
+    <dimen name="common_dimen_30px">30px</dimen>
+    <dimen name="common_dimen_16px">16px</dimen>
+    <dimen name="common_dimen_1px">1px</dimen>
+    <!--　－－－－－－－－－－－－－　ＡＵＴＯ　ＬＡＹＯＵＴ　－－－－－－－－－－－－－－－－ -->
+
+</resources>

@@ -1,0 +1,170 @@
+/* Libraries */
+def supportVersion = "24.2.1"
+def retrofitVersion = "2.1.0"
+def gsonVersion = '2.4'
+def okHttpVersion = "3.4.1"
+def frescoVersion = "0.14.0"
+def javaxAnnotationApiVersion = "1.2"
+def daggerVersion = "2.0.2"
+def butterKnifeVersion = "8.4.0"
+def rxJavaVersion = "1.2.1"
+def rxAndroidVersion = "1.2.1"
+def rxBindingVersion = "0.4.0"
+def ottoVersion = "1.3.8"
+def eventBusVersion = "3.0.0"
+def javaxAnnotationVersion = "1.0"
+def androidAnnotationsVersion = '21.0.3'
+
+/* Testing */
+def robolectricVersion = '3.0'
+def jUnitVersion = '4.12'
+def assertJVersion = '1.7.1'
+def mockitoVersion = '1.9.5'
+def dexmakerVersion = '1.0'
+def espressoVersion = '2.0'
+def testingSupportLibVersion = '0.1'
+
+/* Development */
+def leakCanaryVersion = "1.4-beta2"
+def blockCanaryVersion = "1.1.4"
+
+ext {
+    android = [
+            applicationId    : "com.cn.smart.carsmart",
+            compileSdkVersion: 24,
+            buildToolsVersion: "24.0.1",
+            minSdkVersion    : 16,
+            targetSdkVersion : 23,
+            versionCode      : 1,
+            versionName      : "1.0.0",
+            abortOnLintError : false,
+            checkLintRelease : false,
+            ignoreWarnings   : true,
+            useJack          : false,
+
+            javaVersion      : JavaVersion.VERSION_1_7
+    ]
+
+    presentationTestDependencies = [
+            libMockito          : "org.mockito:mockito-core:${mockitoVersion}",
+            libDexmaker         : "com.google.dexmaker:dexmaker:${dexmakerVersion}",
+            libDexmakerMockito  : "com.google.dexmaker:dexmaker-mockito:${dexmakerVersion}",
+            libEspresso         : "com.android.support.test.espresso:espresso-core:${espressoVersion}",
+            libTestingSupportLib: "com.android.support.test:testing-support-lib:${testingSupportLibVersion}",
+    ]
+
+    presentationDependencies = [
+            libSupportAppcompat        : "com.android.support:appcompat-v7:${supportVersion}",
+            libSupportDesign           : "com.android.support:design:${supportVersion}",
+            libSupportCardView         : "com.android.support:cardview-v7:${supportVersion}",
+            libSupportPalette          : "com.android.support:palette-v7:${supportVersion}",
+            libSupportRecyclerview     : "com.android.support:recyclerview-v7:${supportVersion}",
+            libSupportPercent          : "com.android.support:percent:${supportVersion}",
+            libSupportV4               : "com.android.support:support-v4:${supportVersion}",
+            libSupportV13              : "com.android.support:support-v13:${supportVersion}",
+
+            libButterKnife             : "com.jakewharton:butterknife:${butterKnifeVersion}",
+            libButterKnifeCompiler     : "com.jakewharton:butterknife-compiler:${butterKnifeVersion}",
+            libAnnotationApi           : "javax.annotation:javax.annotation-api:${javaxAnnotationApiVersion}",
+            libDagger                  : "com.google.dagger:dagger:${daggerVersion}",
+            libDaggerCompiler          : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            libRxAndroid               : "io.reactivex:rxandroid:${rxAndroidVersion}",
+            libRxJava                  : "io.reactivex:rxjava:${rxJavaVersion}",
+            libOtto                    : "com.squareup:otto:${ottoVersion}",
+            libEventBus                : "org.greenrobot:eventbus:${eventBusVersion}",
+            libJavaxAnnotation         : "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+
+            libRetrofit                : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            libRetrofitConverterGson   : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+            libRetrofitAdapterRxJava   : "com.squareup.retrofit2:adapter-rxjava:${retrofitVersion}",
+            libOkHttpLoggingInterceptor: "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}",
+            libOkHttp                  : "com.squareup.okhttp3:okhttp:${okHttpVersion}",
+            libChuck                   : "com.readystatesoftware.chuck:library:1.0.3",
+            libChuckNoOp               : "com.readystatesoftware.chuck:library-no-op:1.0.3",
+
+            libGlide                   : "com.github.bumptech.glide:glide:3.7.0",
+            libPicasso                 : "com.squareup.picasso:picasso:2.5.2",
+            libFresco                  : "com.facebook.fresco:fresco:${frescoVersion}",
+            libFrescoImagePipeLine     : "com.facebook.fresco:imagepipeline-okhttp3:${frescoVersion}",
+            libFrescoGif               : "com.facebook.fresco:animated-gif:${frescoVersion}",
+
+            libLogger                  : "com.github.orhanobut:logger:1.12",
+            libStetho                  : "com.facebook.stetho:stetho:1.3.1",
+            libOkStetho                : "com.facebook.stetho:stetho-okhttp3:1.3.1",
+
+            libFileDownloader          : "com.liulishuo.filedownloader:library:0.2.0",
+            libSystembartint           : "com.readystatesoftware.systembartint:systembartint:1.0.3",
+            libSuperToast              : "com.github.johnpersano:supertoasts:1.3.4@aar",
+            libBanner                  : "com.bigkoo:convenientbanner:2.0.5",
+            libTransforms              : "com.ToxicBakery.viewpager.transforms:view-pager-transforms:1.2.32@aar",
+            libDialogPlus              : "com.orhanobut:dialogplus:1.11@aar",
+            libFloating                : "com.melnykov:floatingactionbutton:1.1.0",
+            libStikkyheader            : "com.github.carlonzo.stikkyheader:core:0.0.3-SNAPSHOT",
+            libLoadingDialog           : "com.github.d-max:spots-dialog:0.4@aar",
+            libUltra                   : "in.srain.cube:ultra-ptr:1.0.11",
+            libLinearLayoutManager     : "org.solovyev.android.views:linear-layout-manager:0.5@aar",
+            libSmartTabUtil            : "com.ogaclejapan.smarttablayout:utils-v4:1.6.1@aar",
+            libSmartTabLib             : "com.ogaclejapan.smarttablayout:library:1.6.1@aar",
+            libRecyclerViewAnimator    : "jp.wasabeef:recyclerview-animators:2.2.3",
+            libAutoLayout              : "com.zhy:autolayout:1.4.5",
+            libSlider                  : "com.r0adkll:slidableactivity:2.0.5",
+
+            libFirim                   : "cn.hugeterry.updatefun:updatefun:1.6.0",
+            libUmeng                   : "com.umeng.analytics:analytics:latest.integration",
+    ]
+
+    domainDependencies = [
+            libDagger         : "com.google.dagger:dagger:${daggerVersion}",
+            libDaggerCompiler : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            libJavaxAnnotation: "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            libRxJava         : "io.reactivex:rxjava:${rxJavaVersion}",
+    ]
+
+    domainTestDependencies = [
+            libJunit  : "junit:junit:${jUnitVersion}",
+            libMockito: "org.mockito:mockito-core:${mockitoVersion}",
+    ]
+
+    dataDependencies = [
+            libSupportAppcompat        : "com.android.support:appcompat-v7:${supportVersion}",
+            libSupportV4               : "com.android.support:support-v4:${supportVersion}",
+            libSupportDesign           : "com.android.support:design:${supportVersion}",
+            libSupportRecyclerview     : "com.android.support:recyclerview-v7:${supportVersion}",
+            libDagger                  : "com.google.dagger:dagger:${daggerVersion}",
+            libDaggerCompiler          : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            libRetrofit                : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            libRetrofitConverterGson   : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+            libRetrofitAdapterRxJava   : "com.squareup.retrofit2:adapter-rxjava:${retrofitVersion}",
+            libOkHttpLoggingInterceptor: "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}",
+            libOkHttp                  : "com.squareup.okhttp3:okhttp:${okHttpVersion}",
+            libGson                    : "com.google.code.gson:gson:${gsonVersion}",
+
+            libJavaxAnnotation         : "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            libAndroidAnnotations      : "com.android.support:support-annotations:${androidAnnotationsVersion}",
+
+            libRxJava                  : "io.reactivex:rxjava:${rxJavaVersion}",
+            libRxAndroid               : "io.reactivex:rxandroid:${rxAndroidVersion}",
+            libRxBinding               : "com.jakewharton.rxbinding:rxbinding:${rxBindingVersion}",
+            libRxBindingSupportV4      : "com.jakewharton.rxbinding:rxbinding-support-v4:${rxBindingVersion}",
+            libRxBindingAppcompatV7    : "com.jakewharton.rxbinding:rxbinding-appcompat-v7:${rxBindingVersion}",
+            libRxBindingDesign         : "com.jakewharton.rxbinding:rxbinding-design:${rxBindingVersion}",
+            libRxBindingRecyclerview   : "com.jakewharton.rxbinding:rxbinding-recyclerview-v7:${rxBindingVersion}",
+
+            libRealm                   : "io.realm:realm-android:0.87.5",
+    ]
+
+    dataTestDependencies = [
+            libJunit      : "junit:junit:${jUnitVersion}",
+            libAssertj    : "org.assertj:assertj-core:${assertJVersion}",
+            libMockito    : "org.mockito:mockito-core:${mockitoVersion}",
+            libRobolectric: "org.robolectric:robolectric:${robolectricVersion}",
+    ]
+
+    developmentDebugDependencies = [
+            libLeakCanary: "com.squareup.leakcanary:leakcanary-android:${leakCanaryVersion}",
+    ]
+
+    developmentReleaseDependencies = [
+            libLeakCanary: "com.squareup.leakcanary:leakcanary-android-no-op:${leakCanaryVersion}",
+    ]
+}

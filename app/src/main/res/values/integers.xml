@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="transformer_default">0</integer>
+    <integer name="transformer_accordion">1</integer>
+    <integer name="transformer_background_to_foreground">2</integer>
+    <integer name="transformer_foreground_to_background">3</integer>
+    <integer name="transformer_cube_in">4</integer>
+    <integer name="transformer_cube_out">5</integer>
+    <integer name="transformer_depth_page">6</integer>
+    <integer name="transformer_flip_horizontal">7</integer>
+    <integer name="transformer_flip_vertical">8</integer>
+    <integer name="transformer_rotate_down">9</integer>
+    <integer name="transformer_rotate_up">10</integer>
+    <integer name="transformer_stack">11</integer>
+    <integer name="transformer_zoom_in">12</integer>
+    <integer name="transformer_zoom_out">13</integer>
+</resources>

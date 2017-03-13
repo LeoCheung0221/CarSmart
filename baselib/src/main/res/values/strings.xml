@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">MyBase</string>
+
+    <!-- SweetAlertDialog -->
+    <string name="dialog_default_title">Here\'s a message!</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_ok">OK</string>
+    
+    <!-- share module -->
+    <string name="carsmart_share_sdk_share_copy">复制成功</string>
+    <string name="carsmart_share_sdk_progress_compress_image" tools:ignore="TypographyEllipsis">授权中,请稍后...</string>
+    <string name="carsmart_share_sdk_compress_image_failed">图片处理失败，请稍后重试</string>
+    <string name="carsmart_share_sdk_not_install_wechat">(>_>)请先安装微信~</string>
+    <string name="carsmart_share_sdk_not_install_qq">尚未安装QQ或当前QQ版本不支持分享~</string>
+
+</resources>

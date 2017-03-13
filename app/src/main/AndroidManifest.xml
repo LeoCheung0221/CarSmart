@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.cn.smart.carsmart">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".Core"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup">
+        <!-- ＬＯＧＩＮ -->
+        <activity
+            android:name=".ui.account.login.LoginActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- ＲＥＧＩＳＴＥＲ -->
+        <activity
+            android:name=".ui.account.register.RegisterActivity"
+            android:label="@string/app_name"
+            android:theme="@style/ImageTranslucentTheme" />
+        <!-- ＲＥＴＲＩＥＶＥ -->
+        <activity
+            android:name=".ui.account.retrieve.FindMeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/ImageTranslucentTheme" />
+        <!-- ＭＡＩＮ -->
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:label="@string/app_name" />
+
+        <!-- 解决适配 -->
+        <meta-data
+            android:name="design_width"
+            android:value="768" />
+        <meta-data
+            android:name="design_height"
+            android:value="1280" />
+
+    </application>
+
+</manifest>

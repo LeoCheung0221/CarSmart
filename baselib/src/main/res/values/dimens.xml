@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 甜心弹出框 -->
+    <dimen name="alert_width">290dp</dimen>
+    <dimen name="common_circle_width">3dp</dimen>
+    <dimen name="progress_circle_radius">34dp</dimen>
+
+    <!-- Bootstrap -->
+    <!-- Default button size -->
+    <dimen name="bootstrap_button_default_font_size">14sp</dimen>
+    <dimen name="bootstrap_button_default_vert_padding">5.75dp</dimen>
+    <dimen name="bootstrap_button_default_hori_padding">14dp</dimen>
+    <dimen name="bootstrap_button_default_corner_radius">4dp</dimen>
+    <dimen name="bootstrap_button_default_edge_width">1dp</dimen>
+
+    <!-- Default edit text size -->
+    <dimen name="bootstrap_edit_text_default_font_size">14sp</dimen>
+    <dimen name="bootstrap_edit_text_vert_padding">8dp</dimen>
+    <dimen name="bootstrap_edit_text_hori_padding">5.75dp</dimen>
+    <dimen name="bootstrap_edit_text_corner_radius">6dp</dimen>
+    <dimen name="bootstrap_edit_text_edge_width">1.5dp</dimen>
+
+    <!--Default alert size -->
+    <dimen name="bootstrap_alert_paddings">8dp</dimen>
+    <dimen name="bootstrap_alert_stroke_width">1dp</dimen>
+    <dimen name="bootstrap_alert_default_font_size">14sp</dimen>
+
+    <!-- Thumbnails -->
+    <dimen name="bthumbnail_default_border">8dp</dimen>
+    <dimen name="bthumbnail_rounded_corner">8dp</dimen>
+    <dimen name="bthumbnail_outer_stroke">2dp</dimen>
+
+    <!--Well-->
+    <dimen name="bootstrap_well_corner_radius">8dp</dimen>
+    <dimen name="bootstrap_well_stroke_width">1dp</dimen>
+    <dimen name="bootstrap_well_default_padding">6dp</dimen>
+    <!-- Default dropdown size -->
+    <dimen name="bootstrap_dropdown_default_item_font_size">14sp</dimen>
+    <dimen name="bootstrap_dropdown_default_font_size">14sp</dimen>
+    <dimen name="bootstrap_dropdown_default_item_left_padding">8dp</dimen>
+    <dimen name="bootstrap_dropdown_default_item_right_padding">8dp</dimen>
+    <dimen name="bootstrap_dropdown_default_corner_radius">3dp</dimen>
+    <dimen name="bootstrap_dropdown_default_edge_width">1dp</dimen>
+    <dimen name="bootstrap_dropdown_default_vert_padding">4dp</dimen>
+    <dimen name="bootstrap_dropdown_default_hori_padding">8dp</dimen>
+    <dimen name="bootstrap_dropdown_default_item_height">48dp</dimen>
+
+    <!-- Headings -->
+    <dimen name="bootstrap_h1_text_size">31.5sp</dimen>
+    <dimen name="bootstrap_h1_vert_padding">7.875dp</dimen>
+    <dimen name="bootstrap_h1_hori_padding">12.6dp</dimen>
+
+    <dimen name="bootstrap_h2_text_size">28sp</dimen>
+    <dimen name="bootstrap_h2_vert_padding">7dp</dimen>
+    <dimen name="bootstrap_h2_hori_padding">11.2dp</dimen>
+
+    <dimen name="bootstrap_h3_text_size">24.5sp</dimen>
+    <dimen name="bootstrap_h3_vert_padding">6.125dp</dimen>
+    <dimen name="bootstrap_h3_hori_padding">9.8dp</dimen>
+
+    <dimen name="bootstrap_h4_text_size">21sp</dimen>
+    <dimen name="bootstrap_h4_vert_padding">5.25dp</dimen>
+    <dimen name="bootstrap_h4_hori_padding">8.4dp</dimen>
+
+    <dimen name="bootstrap_h5_text_size">17.5sp</dimen>
+    <dimen name="bootstrap_h5_vert_padding">4.375dp</dimen>
+    <dimen name="bootstrap_h5_hori_padding">7dp</dimen>
+
+    <dimen name="bootstrap_h6_text_size">14dp</dimen>
+    <dimen name="bootstrap_h6_vert_padding">3.5dp</dimen>
+    <dimen name="bootstrap_h6_hori_padding">5.6dp</dimen>
+
+    <!-- Misc -->
+    <dimen name="bootstrap_default_corner_radius">3dp</dimen>
+    <dimen name="bootstrap_progress_bar_height">20dp</dimen>
+    <dimen name="bootstrap_badge_default_size">16dp</dimen>
+    <dimen name="bootstrap_progress_bar_default_font_size">17sp</dimen>
+
+    <!-- ======================================== Bottom Navigation ==================================== -->
+    <dimen name="fixed_min_width">120dp</dimen>
+    <dimen name="fixed_min_width_small_views">104dp</dimen>
+    <dimen name="fixed_max_width">168dp</dimen>
+    <dimen name="fixed_width_padding">12dp</dimen>
+
+    <dimen name="fixed_height">56dp</dimen>
+    <dimen name="fixed_height_top_padding_inactive">2dp
+    </dimen><!-- 8(Top Padding) - 12/2(extra padding due to badges) = 2 -->
+    <dimen name="fixed_height_top_padding_active">0dp
+    </dimen><!-- 6(Top Padding) - 12/2(extra padding due to badges) = 0 -->
+    <dimen name="fixed_height_bottom_padding">10dp</dimen>
+
+    <dimen name="fixed_label_active">14sp</dimen>
+    <dimen name="fixed_label_inactive">12sp</dimen>
+    <item name="fixed_label_active_to_inactive_ratio" format="float" type="dimen">0.857</item>
+
+    <dimen name="fixed_icon_grid">24dp</dimen>
+    <dimen name="fixed_icon_badge_grid_height">36dp
+    </dimen><!-- this adds 6 dp extra to top and bottom icon -->
+    <dimen name="fixed_icon_badge_grid_width">48dp
+    </dimen><!-- this adds 6 dp extra to top and bottom icon -->
+
+    <dimen name="shifting_min_width_active">96dp</dimen>
+    <dimen name="shifting_max_width_active">168dp</dimen>
+    <dimen name="shifting_min_width_inactive">64dp</dimen>
+    <dimen name="shifting_max_width_inactive">96dp</dimen>
+    <dimen name="shifting_width_custom_padding">6dp</dimen>
+
+    <dimen name="shifting_height">56dp</dimen>
+    <dimen name="shifting_height_bottom_padding_inactive">16dp
+    </dimen><!-- not used because in inactive state text-view will be hidden and for icon top padding would be enough -->
+    <dimen name="shifting_height_bottom_padding_active">10dp</dimen>
+    <dimen name="shifting_height_top_padding_active">0dp
+    </dimen><!-- 6(Top padding) - 12/2(extra padding due to badges) = 0 -->
+    <dimen name="shifting_height_top_padding_inactive">10dp
+    </dimen><!-- 56(total) - 24(icon) - 16(bottom padding inactive) = 16 ||| 16 - 12/2(extra padding due to badges)  = 10-->
+
+    <dimen name="shifting_label">14sp</dimen>
+
+    <dimen name="shifting_icon_grid">24dp</dimen>
+    <dimen name="shifting_icon_badge_grid_height">36dp</dimen>
+    <dimen name="shifting_icon_badge_grid_width">48dp</dimen>
+
+    <dimen name="bottom_navigation_elevation">8dp</dimen>
+    <dimen name="bottom_navigation_height">56dp</dimen>
+    <dimen name="bottom_navigation_padded_height">64dp</dimen>
+    <dimen name="bottom_navigation_top_margin_correction">-8dp</dimen><!-- 64 - 56 = 8 -->
+
+    <dimen name="badge_text_size">12sp</dimen><!-- 10 -->
+    <dimen name="badge_corner_radius">13dp</dimen><!-- 15 -->
+    <dimen name="badge_width_padding">4dp</dimen><!-- 4 -->
+    <dimen name="badge_height_padding">1dp</dimen><!-- 1 -->
+    <dimen name="badge_top_margin">2dp</dimen><!-- 2 -->
+    <!-- ======================================== Bottom Navigation ==================================== -->
+
+</resources>

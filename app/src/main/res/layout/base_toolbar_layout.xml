@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/apk/res-auto"
+    xmlns:tools2="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/common_dimen_40px">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:minHeight="?attr/actionBarSize"
+        tools:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        tools:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="?attr/actionBarSize"
+            android:orientation="horizontal">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/ivNavBack"
+                    android:layout_width="@dimen/common_dimen_50px"
+                    android:layout_height="@dimen/common_dimen_50px"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/btn_nav_back" />
+
+                <com.cn.smart.baselib.uiframework.bootstrap.AwesomeTextView
+                    android:id="@+id/atvBackTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="6dp"
+                    android:text="返回"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:visibility="invisible"
+                    tools2:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.cn.smart.baselib.uiframework.bootstrap.AwesomeTextView
+                android:id="@+id/atvToolBarMainTitle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                tools2:ignore="UseCompoundDrawables" />
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+</com.zhy.autolayout.AutoFrameLayout>

@@ -1,0 +1,170 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion //编译版本
+    buildToolsVersion rootProject.ext.android.buildToolsVersion //构建工具版本
+
+    //配置默认信息
+    defaultConfig {
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        //运行脚本 -> 搭建Espresso步骤1
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+//        ndk {
+//            moduleName "JniTest" //模组名称
+//            abiFilters "armeabi", "armeabi-v7a", "x86" //支持的平台
+//            ldLibs "EGL", "GLESv3", "dl", "log" //链接的库
+//        }
+        vectorDrawables.useSupportLibrary = true
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    //配置相关源文件位置
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            assets.srcDirs = ['assets']
+        }
+    }
+    //配置签名信息
+    signingConfigs {
+        def Properties localProps = new Properties()
+        localProps.load(new FileInputStream(file('../local.properties')))
+        def Properties keyProps = new Properties()
+
+        //if can not find the property of keystore.props.file , then using debug.keystore
+        if (localProps['keystore.props.file']) {
+            keyProps.load(new FileInputStream(file(localProps['keystore.props.file'])))
+        } else {
+            keyProps["store"] = '../buildsystem/carsmart.jks'
+            keyProps["storePass"] = '123456'
+            keyProps["alias"] = 'carsmart'
+            keyProps["pass"] = '123456'
+        }
+
+        debug {
+            storeFile file(keyProps["store"])
+            keyAlias keyProps["alias"]
+            storePassword keyProps["storePass"]
+            keyPassword keyProps["pass"]
+        }
+
+        release {
+            // release版本使用assert确保存在该属性 否则报错，避免错误打包
+            assert localProps['keystore.props.file'];
+            storeFile file(keyProps["store"])
+            keyAlias keyProps["alias"]
+            storePassword keyProps["storePass"]
+            keyPassword keyProps["pass"]
+        }
+    }
+    //配置构建类型
+    buildTypes {
+        debug {
+
+        }
+
+        release {
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //配置产品风格信息
+    productFlavors {
+
+    }
+    //设置测试相关属性
+    testOptions {}
+    //设置aapt属性
+    aaptOptions {}
+    //设置lint属性
+    lintOptions {
+        abortOnError rootProject.ext.android.abortOnLintError
+        checkReleaseBuilds rootProject.ext.android.checkLintRelease
+        quiet true
+        ignoreWarnings true
+        //some libraries have issues with this
+        disable 'InvalidPackage'
+        //Lint gives this warning but SDK 20 would be Android L beta
+        disable 'OldTargetApi'
+    }
+    //设置编译相关属性
+    compileOptions {
+        sourceCompatibility rootProject.ext.android.javaVersion
+        sourceCompatibility rootProject.ext.android.javaVersion
+    }
+    //设置APK包相关属性
+    packagingOptions { //排除干扰打包项 -> 搭建Espresso步骤2
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:support-v4:24.2.1'
+    testCompile 'junit:junit:4.12'
+    def presentationDependencies = rootProject.ext.presentationDependencies
+    def developmentDebugDependencies = rootProject.ext.developmentDebugDependencies
+    def developmentReleaseDependencies = rootProject.ext.developmentReleaseDependencies
+
+    compile presentationDependencies.libSupportV13
+    compile presentationDependencies.libSupportAppcompat
+    compile presentationDependencies.libSupportDesign
+    compile presentationDependencies.libSupportCardView
+    compile presentationDependencies.libSupportRecyclerview
+    //OkHttp
+    compile presentationDependencies.libOkHttp
+    compile presentationDependencies.libOkHttpLoggingInterceptor
+    //Chuck
+    debugCompile presentationDependencies.libChuck
+    releaseCompile presentationDependencies.libChuckNoOp
+    //Retrofit
+    compile presentationDependencies.libRetrofit
+    compile presentationDependencies.libRetrofitConverterGson
+    compile presentationDependencies.libRetrofitAdapterRxJava
+    //ButterKnife
+    compile presentationDependencies.libButterKnife
+    apt presentationDependencies.libButterKnifeCompiler
+    //Rx
+    compile presentationDependencies.libRxAndroid
+    compile presentationDependencies.libRxJava
+    //Dagger
+    compile presentationDependencies.libAnnotationApi
+    compile presentationDependencies.libDagger
+    apt presentationDependencies.libDaggerCompiler
+    //otto
+    compile presentationDependencies.libOtto
+    //fresco
+    compile presentationDependencies.libFresco
+    compile presentationDependencies.libFrescoImagePipeLine
+    compile presentationDependencies.libFrescoGif
+
+    //app custom dependencies
+    compile presentationDependencies.libAutoLayout
+    compile presentationDependencies.libSlider
+
+    //file downloader
+    compile presentationDependencies.libFileDownloader
+    //Logger
+    //    compile presentationDependencies.libLogger
+    //leakcanary
+    debugCompile developmentDebugDependencies.libLeakCanary
+    releaseCompile developmentReleaseDependencies.libLeakCanary
+    compile project(':baselib')
+}
